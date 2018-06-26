@@ -1,7 +1,7 @@
 {
-  "username":"nick_spanner",
-  "token":"KsrgQfTlUF5XBLTMafKjp62KjWaGmJ3f",
-  "project":"NickSpanner",
+  "username":"spanner",
+  "token":"RkFEeU6YXNdE4LAXh2fUASivMKclUxBc",
+  "project":"SpannerDemo",
   "code_quality":false,
   "build_binary":false,
   "deploy":false,
