@@ -43,5 +43,5 @@ if __name__ == "__main__":
 
     time.sleep(2)
 
+    print("nikolas")
     run_test(validate_network_cmd_off())
-
