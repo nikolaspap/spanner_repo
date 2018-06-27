@@ -1,5 +1,5 @@
 {
-  "project":"SpannerDemo",
+  "script":"Scenario.py",
   "code_quality":false,
   "build_binary":false,
   "deploy":false,
