@@ -4,21 +4,6 @@ import time
 import json
 
 
-
-TESTBOARD_ID = "340040000f51353532343635"
-IFTTT_ACCESS_TOKEN = "54c8df8cb04da38a34e26ec6da046abf92182de4"
-
-testboard = Testboard(TESTBOARD_ID)
-ifttt = Ifttt(IFTTT_ACCESS_TOKEN)
-
-# D1 -> Relay PIN
-RELAY_PIN = "D7"
-
-# Cloud Functionality
-def validate_network_cmd_on():
-    ifttt.buttonOn()
-
-    time.sleep(2)
     # check PIN state
     value = testboard.digitalRead(RELAY_PIN)
     if (testboard.assert_spanner(value) == 1):
