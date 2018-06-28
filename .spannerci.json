@@ -1,5 +1,7 @@
 {
-  "script":"Scenario.py",
+  "username":"volos",
+  "token":"7WQ2257vvKhGvv9puoaSKXql5NZyVElv",
+  "project":"volosB2",
   "code_quality":false,
   "build_binary":false,
   "deploy":false,
