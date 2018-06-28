@@ -27,4 +27,4 @@ def C1_validate_ifttt_buttonOn():
 
 if __name__ == "__main__":
    res = run_test(C1_validate_ifttt_buttonOn())
-   print(res)
+   print("nikolas")
