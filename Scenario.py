@@ -1,9 +1,8 @@
 from Testboard import Testboard
 from Ifttt import Ifttt
 import time
-import json
 
-
+BINARY_FROM = "SPANNER"
 TESTBOARD_ID = "340040000f51353532343635"
 IFTTT_ACCESS_TOKEN = "54c8df8cb04da38a34e26ec6da046abf92182de4"
 
@@ -17,11 +16,18 @@ RELAY_PIN = "D7"
 def validate_network_cmd_on():
     ifttt.buttonOn()
 
+    testboard.digitalWrite(RELAY_PIN, 'HIGH')
     time.sleep(2)
+
+    value = testboard.digitalRead(RELAY_PIN)
+    if testboard.spanner_assertTrue(value) == 1:
+        return 0 #Success
+    else:
+        return 1 #Failure
 
     # check PIN state
     value = testboard.digitalRead(RELAY_PIN)
-    if (testboard.assert_spanner(value) == 1):
+    if (testboard.spanner_assertTrue(value) == 1):
         return 0 # Success
     else:
         return 1 # Failure
@@ -30,11 +36,16 @@ def validate_network_cmd_on():
 def validate_network_cmd_off():
     ifttt.buttonOff()
 
+    testboard.digitalWrite(RELAY_PIN, 'LOW')
     time.sleep(2)
+
+    value = testboard.digitalRead(RELAY_PIN)
+    if (testboard.spanner_assertTrue(value) == 0):
+        return 0
 
     # check PIN state
     value = testboard.digitalRead(RELAY_PIN)
-    if (testboard.assert_spanner(value) == 0):
+    if (testboard.spanner_assertTrue(value) == 0):
         return 0 # Success
     else:
         return 1 # Failure
