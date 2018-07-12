@@ -51,43 +51,10 @@ def validate_network_cmd_off():
         return 1 # Failure
 
 if __name__ == "__main__":
-
+    print("---Spanner Test Started---")
     run_test(validate_network_cmd_on())
-    print("1")
-    time.sleep(5)
-
+    time.sleep(120)
     run_test(validate_network_cmd_off())
-    print("2")
-    time.sleep(5)
-    
-    run_test(validate_network_cmd_on())
-    print("3")
-    time.sleep(5)
-
-    run_test(validate_network_cmd_off())
-    print("4")
-    time.sleep(5)
-    
-    run_test(validate_network_cmd_on())
-    print("5")
-    time.sleep(5)
-
-    run_test(validate_network_cmd_off())
-    print("6")
-    time.sleep(5)
-
-    run_test(validate_network_cmd_on())
-    print("7")
-    time.sleep(5)
-
-    run_test(validate_network_cmd_off())
-    print("8")
-    
-    run_test(validate_network_cmd_on())
-    print("9")
-    time.sleep(5)
-
-    run_test(validate_network_cmd_off())
-    print("10")
-    
+    time.sleep(120)
+    print("---Spanner Test Finished---")
 
