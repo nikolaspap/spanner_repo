@@ -53,9 +53,9 @@ def validate_network_cmd_off():
 if __name__ == "__main__":
     print("---Spanner Test Started---")
     run_test(validate_network_cmd_on())
-    time.sleep(10)
+    time.sleep(20)
     run_test(validate_network_cmd_off())
-    time.sleep(10)
+    time.sleep(20)
     print("---Spanner Test Finished---")
 
 #     run_test(validate_network_cmd_on())
