@@ -83,4 +83,11 @@ if __name__ == "__main__":
     run_test(validate_network_cmd_off())
     print("8")
     
+    run_test(validate_network_cmd_on())
+    print("9")
+    time.sleep(5)
+
+    run_test(validate_network_cmd_off())
+    print("10")
+    
 
