@@ -25,23 +25,12 @@ def validate_network_cmd_on():
     else:
         return 1 #Failure
 
-    # check PIN state
-    value = testboard.digitalRead(RELAY_PIN)
-    if (testboard.spanner_assertTrue(value) == 1):
-        return 0 # Success
-    else:
-        return 1 # Failure
-
 # Cloud Functionality
 def validate_network_cmd_off():
     ifttt.buttonOff()
 
     testboard.digitalWrite(RELAY_PIN, 'LOW')
     time.sleep(2)
-
-    value = testboard.digitalRead(RELAY_PIN)
-    if (testboard.spanner_assertTrue(value) == 0):
-        return 0
 
     # check PIN state
     value = testboard.digitalRead(RELAY_PIN)
