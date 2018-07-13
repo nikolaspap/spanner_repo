@@ -39,10 +39,10 @@ def validate_network_cmd_off():
 
 if __name__ == "__main__":
     print("Spanner Started")
-    run_test(validate_network_cmd_on())
+#     run_test(validate_network_cmd_on())
     print("light is on")
     time.sleep(50)
-    run_test(validate_network_cmd_off())
+#     run_test(validate_network_cmd_off())
     print("light is off")
     time.sleep(50)
     print("finished")
