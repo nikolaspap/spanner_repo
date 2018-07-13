@@ -41,7 +41,7 @@ if __name__ == "__main__":
     print("Spanner Started")
 #     run_test(validate_network_cmd_on())
     print("WAITING FOR 4minutes")
-    time.sleep(1800)
+    time.sleep(5200)
     print("WAITING FOR 2 more minutes")
     time.sleep(2)
     print("Spanner Test Finished")
