@@ -13,7 +13,7 @@ TESTBOARD_ID = "250020001047343438323536"
 testboard = Testboasadsadrd(TESTBOARD_ID)
 
 # Our Product's Input will be connected the Testboard's Pin D3, making it our Output Pin
-OUTPUT_PIN = "D3"
+    OUTPUT_PIN = "D3"
 
 def toggle_digital_output():
     # set PIN state
@@ -26,4 +26,4 @@ def toggle_digital_output():
     spanner.assertFalse(value)
 
 if __name__ == "__main__":
-    toggle_digital_output()
+        toggle_digital_output()
