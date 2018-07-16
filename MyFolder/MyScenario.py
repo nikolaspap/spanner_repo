@@ -6,7 +6,7 @@
 # In our particular example, we are only setting value and not asserting anything. Of course this would never be a real world example, it's only for educational purposes
 
 import time
-from Spanner import Spanner
+from Spanner22 import Spanner
 from Testboard import Testboard
 
 TESTBOARD_ID = "250020001047343438323536"
