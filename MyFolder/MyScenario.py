@@ -1,4 +1,3 @@
-
 # This example will set one of our Testboard's outputs, first to HIGH, and then to LOW. 
 #
 # The goal of this example is to show you how you can drive a digital input on your device from the Testboard. 
@@ -23,7 +22,7 @@ def toggle_digital_output():
     time.sleep(2)
 
     value = testboard.digitalWrite(OUTPUT_PIN, 'LOW')
-    spanner.assertFalse(value)
+    spanner.assertTrue(value)
 
 if __name__ == "__main__":
     toggle_digital_output()
