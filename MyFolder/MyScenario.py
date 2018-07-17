@@ -13,27 +13,10 @@ from Testboard import Testboard
 TESTBOARD_ID = "250020001047343438323536"
 testboard = Testboard(TESTBOARD_ID)
 
-# Our device's 1st Output Pin will be connected to the Testboard's D7, making it our Input Pin 1
-INPUT_PIN_1 = "D7"
-# Our device's 2nd Output Pin will be connected to the Testboard's D5, making it our Input Pin 2
-INPUT_PIN_2 = "D5"
-
-def validate_digital_input_high():
-    # check PIN state
-    value = testboard.digitalRead(INPUT_PIN_1)
-
-    spanner.assertTrue(value);
-
-def validate_digital_input_low():
-    # check PIN state
-    value = testboard.digitalRead(INPUT_PIN_2)
-
-    spanner.assertFalse(value);
-
 if __name__ == "__main__":
 
-    validate_digital_input_high()
-
-    time.sleep(2)
-
-    validate_digital_input_low()
+    print("Spanner Unlimited Started")
+    sleep(1200)
+    print("Test almost Finished")
+    sleep(100)
+    print("Unlimited Finished")
