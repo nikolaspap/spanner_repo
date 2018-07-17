@@ -26,4 +26,4 @@ def toggle_digital_output():
     spanner.assertFalse(value)
 
 if __name__ == "__main__":
-        toggle_digital_output()
+    toggle_digital_output()
