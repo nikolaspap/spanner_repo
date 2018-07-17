@@ -3,7 +3,6 @@
 # The goal of this example is to show you how you can drive a digital input on your device from the Testboard.
 #
 # In our particular example, we are only setting value and not asserting anything. Of course this would never be a real world example, it's only for educational purposes
-
 import time
 from Spanner import Spanner
 from Testboard import Testboard
