@@ -16,7 +16,7 @@ testboard = Testboard(TESTBOARD_ID)
 if __name__ == "__main__":
 
     print("Spanner Unlimited Started")
-    sleep(1200)
+    time.sleep(1200)
     print("Test almost Finished")
-    sleep(100)
+    time.sleep(100)
     print("Unlimited Finished")
