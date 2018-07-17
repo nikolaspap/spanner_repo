@@ -10,7 +10,7 @@ from Spanner import Spanner
 from Testboard import Testboard
 
 TESTBOARD_ID = "250020001047343438323536"
-testboard = Testboasadsadrd(TESTBOARD_ID)
+testboard = Testboard(TESTBOARD_ID)
 
 # Our Product's Input will be connected the Testboard's Pin D3, making it our Output Pin
 OUTPUT_PIN = "D3"
