@@ -3,14 +3,15 @@ from Ifttt import Ifttt
 import time
 
 BINARY_FROM = "SPANNER"
-TESTBOARD_ID = "200023001347343438323536"
+# TESTBOARD_ID = "200023001347343438323536"
+TESTBOARD_ID = "340040000f51353532343635"
 IFTTT_ACCESS_TOKEN = "54c8df8cb04da38a34e26ec6da046abf92182de4"
 
 testboard = Testboard(TESTBOARD_ID)
 ifttt = Ifttt(IFTTT_ACCESS_TOKEN)
 
 # D7 -> Relay PIN
-RELAY_PIN = "D7"
+RELAY_PIN = "D3"
 
 # Cloud Functionality
 def validate_network_cmd_on():
