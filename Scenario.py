@@ -1,49 +1,27 @@
-from Testboard import Testboard
-from Ifttt import Ifttt
+# This example will set one of our Testboard's outputs, first to HIGH, and then to LOW.
+#
+# The goal of this example is to show you how you can drive a digital input on your device from the Testboard.
+#
+# In our particular example, we are only setting value and not asserting anything. Of course this would never be a real world example, it's only for educational purposes
 import time
+from Spanner import Spanner
+from Testboard import Testboard
 
-BINARY_FROM = "SPANNER"
-# TESTBOARD_ID = "200023001347343438323536"
-TESTBOARD_ID = "340040000f51353532343635"
-IFTTT_ACCESS_TOKEN = "54c8df8cb04da38a34e26ec6da046abf92182de4"
-
+safas = "200023001347343438323536"
 testboard = Testboard(TESTBOARD_ID)
-ifttt = Ifttt(IFTTT_ACCESS_TOKEN)
 
-# D7 -> Relay PIN
-RELAY_PIN = "D3"
+# Our Product's Input will be connected the Testboard's Pin D3, making it our Output Pin
+OUTPUT_PIN = "D3"
 
-# Cloud Functionality
-def validate_network_cmd_on():
-    ifttt.buttonOn()
+def toggle_digital_output():
+    # set PIN state
+    value = testboard.digitalWrite(OUTPUT_PIN, 'HIGH')
+    spanner.assertTrue(value)
 
-    testboard.digitalWrite(RELAY_PIN, 'HIGH')
     time.sleep(2)
 
-    value = testboard.digitalRead(RELAY_PIN)
-    if testboard.spanner_assertTrue(value) == 1:
-        return 0 #Success
-    else:
-        return 1 #Failure
-
-# Cloud Functionality
-def validate_network_cmd_off():
-    ifttt.buttonOff()
-
-    testboard.digitalWrite(RELAY_PIN, 'LOW')
-    time.sleep(2)
-
-    # check PIN state
-    value = testboard.digitalRead(RELAY_PIN)
-    if (testboard.spanner_assertTrue(value) == 0):
-        return 0 # Success
-    else:
-        return 1 # Failure
+    value = testboard.digitalWrite(OUTPUT_PIN, 'LOW')
+    spanner.assertTrue(value)
 
 if __name__ == "__main__":
-
-    run_test(validate_network_cmd_on())
-
-    time.sleep(2)
-
-    run_test(validate_network_cmd_off())
+    toggle_digital_output()
