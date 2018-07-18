@@ -18,10 +18,4 @@ def toggle_digital_output():
     value = testboard.digitalWrite(OUTPUT_PIN, 'HIGH')
     spanner.assertTrue(value)
 
-    time.sleep(2)
-
-    value = testboard.digitalWrite(OUTPUT_PIN, 'LOW')
-    spanner.assertTrue(value)
-
-if __name__ == "__main__":
-    toggle_digital_output1()
+    time.s
