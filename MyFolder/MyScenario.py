@@ -7,7 +7,7 @@ import time
 from Spanner import Spanner
 from Testboard import Testboard
 
-TESTBOARD = "340040000f51353532343635"
+TESTBOARD_ID = "340040000f51353532343635"
 testboard = Testboard(TESTBOARD_ID)
 
 # Our Product's Input will be connected the Testboard's Pin D3, making it our Output Pin
@@ -28,4 +28,4 @@ def toggle_digital_output():
     spanner.assertTrue(value)
 
 if __name__ == "__main__":
-    toggle_digital_output()
+    toggle_digital_output1()
