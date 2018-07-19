@@ -28,4 +28,4 @@ def toggle_digital_output():
     spanner.assertTrue(value)
 
 if __name__ == "__main__":
-    toggle_digital_output1()
+    toggle_digital_output()
